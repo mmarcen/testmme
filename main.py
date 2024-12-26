@@ -24,7 +24,6 @@ def get_user_info():
     return name, apellido
 
 if __name__ == "__main__":
-    print(adios())
     try:
         name, apellido = get_user_info()
         print(hola(name, apellido))
@@ -33,6 +32,7 @@ if __name__ == "__main__":
         num = int(input("Introduce un número para calcular Fibonacci: "))
         result = fibonacci(num)
         print(f"Fibonacci({num}) = {result}")
+        print(adios())
     except ValueError as e:
         print(f"Error: {e}")
     except TypeError as e:

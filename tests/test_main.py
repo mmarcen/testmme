@@ -10,7 +10,7 @@ def test_hola():
     assert hola("Juan", "Perez") == "Hola, Juan Perez"
 
 def test_adios():
-    assert adios() == "adios"
+    assert adios() == "Bye"
     
 def test_fibonacci_zero():
     assert fibonacci(0) == 0

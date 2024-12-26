@@ -18,4 +18,4 @@ def adios():
     Returns:
         str: Una despedida.
     """
-    return "adios"
+    return "Bye"
