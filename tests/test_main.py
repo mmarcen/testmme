@@ -16,6 +16,9 @@ def test_hola():
     assert hola("Hans", "Schmidt", "Alemania") == "Hallo, Hans Schmidt!"
     assert hola("John", "Smith", "Inglaterra") == "Hello, John Smith!"
     
+    # Test Aragonese greeting
+    assert hola("Pedro", "García", "Aragón") == "Buen día, Pedro García!"
+    
     # Test unknown country (should default to Spanish)
     assert hola("John", "Doe", "Desconocido") == "Hola, John Doe"
 
@@ -28,6 +31,9 @@ def test_adios():
     assert adios("Italia") == "Arrivederci!"
     assert adios("Alemania") == "Auf Wiedersehen!"
     assert adios("Inglaterra") == "Goodbye!"
+    
+    # Test Aragonese goodbye
+    assert adios("Aragón") == "¡Dica!"
     
     # Test unknown country (should default to Spanish)
     assert adios("Desconocido") == "Adiós"

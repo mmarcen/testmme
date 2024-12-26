@@ -19,7 +19,8 @@ def hola(nombre, apellido, pais):
         "Portugal": f"Olá, {nombre} {apellido}!",
         "Japón": f"こんにちは, {nombre} {apellido}!",
         "China": f"你好, {nombre} {apellido}!",
-        "Brasil": f"Oi, {nombre} {apellido}!"
+        "Brasil": f"Oi, {nombre} {apellido}!",
+        "Aragón": f"Buen día, {nombre} {apellido}!"
     }
     
     return saludos.get(pais, f"Hola, {nombre} {apellido}")  # Si el país no está en el diccionario, saluda en español
@@ -43,7 +44,8 @@ def adios(pais):
         "Portugal": "Adeus!",
         "Japón": "さようなら!",
         "China": "再见!",
-        "Brasil": "Tchau!"
+        "Brasil": "Tchau!",
+        "Aragón": "¡Dica!"
     }
     
     return despedidas.get(pais, "Adiós")  # Si el país no está en el diccionario, despide en español
