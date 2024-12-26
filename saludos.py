@@ -24,11 +24,26 @@ def hola(nombre, apellido, pais):
     
     return saludos.get(pais, f"Hola, {nombre} {apellido}")  # Si el país no está en el diccionario, saluda en español
 
-def adios():
+def adios(pais):
     """
-    Devuelve una despedida.
+    Devuelve una despedida en el idioma local del país.
+
+    Args:
+        pais (str): El país de la persona.
 
     Returns:
-        str: Una despedida.
+        str: Una despedida en el idioma correspondiente.
     """
-    return "adios"
+    despedidas = {
+        "España": "¡Adiós!",
+        "Francia": "Au revoir!",
+        "Italia": "Arrivederci!",
+        "Alemania": "Auf Wiedersehen!",
+        "Inglaterra": "Goodbye!",
+        "Portugal": "Adeus!",
+        "Japón": "さようなら!",
+        "China": "再见!",
+        "Brasil": "Tchau!"
+    }
+    
+    return despedidas.get(pais, "Adiós")  # Si el país no está en el diccionario, despide en español

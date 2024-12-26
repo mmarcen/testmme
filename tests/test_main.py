@@ -20,7 +20,17 @@ def test_hola():
     assert hola("John", "Doe", "Desconocido") == "Hola, John Doe"
 
 def test_adios():
-    assert adios() == "adios"
+    # Test default goodbye (Spanish)
+    assert adios("México") == "Adiós"
+    
+    # Test different country goodbyes
+    assert adios("Francia") == "Au revoir!"
+    assert adios("Italia") == "Arrivederci!"
+    assert adios("Alemania") == "Auf Wiedersehen!"
+    assert adios("Inglaterra") == "Goodbye!"
+    
+    # Test unknown country (should default to Spanish)
+    assert adios("Desconocido") == "Adiós"
     
 def test_fibonacci_zero():
     assert fibonacci(0) == 0
