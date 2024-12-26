@@ -17,16 +17,26 @@ def fibonacci(n):
     return b
 
 def get_user_info():
+    """
+    Obtiene el nombre, apellido y país del usuario.
+
+    Returns:
+        tuple: (nombre, apellido, pais) ingresados por el usuario.
+    
+    Raises:
+        ValueError: Si alguno de los campos está vacío.
+    """
     name = input("Por favor, introduce tu nombre: ")
     apellido = input("Por favor, introduce tu apellido: ")
-    if not name or not apellido:
-        raise ValueError("El nombre y el apellido no pueden estar vacíos.")
-    return name, apellido
+    pais = input("Por favor, introduce tu país: ")
+    if not name or not apellido or not pais:
+        raise ValueError("El nombre, apellido y país no pueden estar vacíos.")
+    return name, apellido, pais
 
 if __name__ == "__main__":
     try:
-        name, apellido = get_user_info()
-        print(hola(name, apellido))
+        name, apellido, pais = get_user_info()
+        print(hola(name, apellido, pais))
         
         # Test fibonacci
         num = int(input("Introduce un número para calcular Fibonacci: "))

@@ -7,7 +7,17 @@ def test_hello_world():
     assert hello_world() == "Hello, World!"
 
 def test_hola():
-    assert hola("Juan", "Perez") == "Hola, Juan Perez"
+    # Test default greeting (Spanish)
+    assert hola("Juan", "Perez", "México") == "Hola, Juan Perez"
+    
+    # Test different country greetings
+    assert hola("Jean", "Dupont", "Francia") == "Bonjour, Jean Dupont!"
+    assert hola("Mario", "Rossi", "Italia") == "Ciao, Mario Rossi!"
+    assert hola("Hans", "Schmidt", "Alemania") == "Hallo, Hans Schmidt!"
+    assert hola("John", "Smith", "Inglaterra") == "Hello, John Smith!"
+    
+    # Test unknown country (should default to Spanish)
+    assert hola("John", "Doe", "Desconocido") == "Hola, John Doe"
 
 def test_adios():
     assert adios() == "adios"
